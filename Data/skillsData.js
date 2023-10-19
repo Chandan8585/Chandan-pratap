@@ -1,13 +1,7 @@
-import { v4 as uuid } from "uuid";
-
+// import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'https://cdn.skypack.dev/uuid';
 export const skillData = [
-  {
-    id: uuid(),
-    skillImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png",
-    skillImage: "../assets/bootstrap.png",
-    logo: "react logo",
-    logo_text: "react js",
-  },
+
   {
     id: uuid(),
     skillImage: "./assets/html.png",
@@ -18,45 +12,31 @@ export const skillData = [
     id: uuid(),
     skillImage: "./assets/css.png",
     logo: "css logo",
-    logo_text: "css",
+    logo_text: "Css",
   },
   {
     id: uuid(),
     skillImage: "./assets/js.png",
     logo: "javascript logo",
-    logo_text: "javascript",
+    logo_text: "Javascript",
   },
-
+  {
+    id: uuid(),
+    skillImage: "./assets/react.png",
+    logo: "React js logo",
+    logo_text: "react js",
+  },
+  {
+    id: uuid(),
+    skillImage: "./assets/redux.png",
+    logo: "Redux logo",
+    logo_text: "Redux",
+  },
   {
     id: uuid(),
     skillImage: "./assets/bootstrap.png",
-    logo: "bootstrap logo",
-    logo_text: "bootstrap",
-  },
-
-  {
-    id: uuid(),
-    skillImage: "./assets/nextjs.png",
-    logo: "NextJS logo",
-    logo_text: "next js",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/sc.png",
-    logo: "Styled-Components logo",
-    logo_text: "Styled Component",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/framer-motion.png",
-    logo: "Framer Motion",
-    logo_text: "Framer Motion",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/github.png",
-    logo: "github logo",
-    logo_text: "github",
+    logo: "SASS logo",
+    logo_text: "SASS",
   },
   {
     id: uuid(),
@@ -64,6 +44,29 @@ export const skillData = [
     logo: "Tailwind logo",
     logo_text: "Tailwind.css",
   },
-];
+  {
+    id: uuid(),
+    skillImage: "./assets/nodejs-7578002.png",
+    logo: "nodejs logo",
+    logo_text: "node js",
+  },
+ {  id: uuid(),
+    skillImage: "https://i0.wp.com/iotbyhvm.ooo/wp-content/uploads/2019/01/expressjs.png?fit=872%2C472&ssl=1",
+    logo: "express js logo",
+    logo_text: "express js", 
+},
+{
+    id: uuid(),
+    skillImage: "./assets/mongo-db.png",
+    logo: "mongodb logo",
+    logo_text: "mongodb",
+  },
+  {
+    id: uuid(),
+    skillImage: "./assets/github.png",
+    logo: "github logo",
+    logo_text: "github",
+  },
 
+];
 

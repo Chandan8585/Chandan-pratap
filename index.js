@@ -1,93 +1,43 @@
-// import { v4 as uuid } from "uuid";
-import { v4 as uuid } from 'https://cdn.skypack.dev/uuid';
- const skillData = [
-
-  {
-    id: uuid(),
-    skillImage: "./assets/html.png",
-    logo: "html logo",
-    logo_text: "html5",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/css.png",
-    logo: "css logo",
-    logo_text: "Css",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/js.png",
-    logo: "javascript logo",
-    logo_text: "Javascript",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/react.png",
-    logo: "React js logo",
-    logo_text: "react js",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/redux.png",
-    logo: "Redux logo",
-    logo_text: "Redux",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/bootstrap.png",
-    logo: "bootstrap logo",
-    logo_text: "bootstrap",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/tailwind-css-icon.png",
-    logo: "Tailwind logo",
-    logo_text: "Tailwind.css",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/nodejs-7578002.png",
-    logo: "nodejs logo",
-    logo_text: "node js",
-  },
- {  id: uuid(),
-    skillImage: "https://i0.wp.com/iotbyhvm.ooo/wp-content/uploads/2019/01/expressjs.png?fit=872%2C472&ssl=1",
-    logo: "express js logo",
-    logo_text: "express js", 
-},
-{
-    id: uuid(),
-    skillImage: "./assets/mongo-db.png",
-    logo: "mongodb logo",
-    logo_text: "mongodb",
-  },
-  {
-    id: uuid(),
-    skillImage: "./assets/github.png",
-    logo: "github logo",
-    logo_text: "github",
-  },
-
-];
-
-
-
-// ... (your import statements and skillData array)
-
-// ... (import statements and skillData array)
+import { skillData } from "./Data/skillsData.js";
 
 const skillsSection = document.querySelector(".skills");
-const skillContainer = document.createElement("div");
 
 skillData.forEach((item) => {
+  const skillContainer = document.createElement("div"); // Create a container for each skill
+  skillContainer.classList.add("skill-container");
+
   const skillImage = document.createElement("img");
   skillImage.classList.add("skill-image");
-  skillImage.setAttribute("src", item.skillImage); // Set the src attribute
-  skillImage.setAttribute("alt", item.logo_text); // Set the alt attribute
+  skillImage.setAttribute("src", item.skillImage);
+  skillImage.setAttribute("alt", item.logo_text);
+
+  const skillTag = document.createElement("p");
+  skillTag.classList.add("skill-tag");
+  skillTag.innerText = item.logo_text;
+
   skillContainer.appendChild(skillImage);
+  skillContainer.appendChild(skillTag);
+  skillsSection.appendChild(skillContainer);
 });
 
-skillsSection.appendChild(skillContainer);
+/* The speed/duration of the effect in milliseconds */
+var i = 0;
+var txt = 'I am a Frontend Developer'; /* The text */
+var speed = 200; 
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("role").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else{
+    i=0;
+    document.getElementById("role").innerHTML = '';
+    setTimeout(typeWriter, speed);
+  }
+}
 
 
-console.log({skillsSection, skillContainer, skillImage})
+
+// for(let j=0 ; j<100 ; j++){
+    typeWriter();
+
